@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111111" />
+    <title>SilverBraze | Flux Coated Alloys</title>
+    <meta name="description" content="Silver brazing alloy rods — flux coated, made in Korea, supplied in 1 kg packs." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root { --ink:#141414; --muted:#6f706f; --line:#dfdfdc; --paper:#f7f7f4; --silver:#c9cbc9; --accent:#db4a32; }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; }
+      body { margin:0; color:var(--ink); background:var(--paper); font-family:Manrope, sans-serif; }
+      .shell { max-width:1240px; margin:auto; padding:0 28px; }
+      nav { height:76px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+      .brand { direction:ltr; font:600 19px/1 Manrope,sans-serif; letter-spacing:-.8px; }
+      .brand i { color:var(--accent); font-style:normal; }
+      .nav-note { direction:ltr; color:var(--muted); font:12px/1 "DM Mono",monospace; letter-spacing:.04em; }
+      .hero { min-height:440px; display:grid; grid-template-columns:1.2fr .8fr; align-items:end; gap:40px; padding:78px 0 60px; border-bottom:1px solid var(--line); }
+      .eyebrow { direction:ltr; color:var(--accent); font:500 12px/1 "DM Mono",monospace; letter-spacing:.08em; }
+      h1 { max-width:760px; margin:0 0 22px; direction:ltr; color:var(--accent); font:600 clamp(42px,6vw,82px)/.98 Manrope,sans-serif; letter-spacing:.035em; }
+      .hero p { max-width:430px; margin:0; color:var(--muted); font-size:15px; line-height:2; }
+      .pack { position:relative; height:250px; overflow:hidden; border-radius:2px; background:#20211f url('assets/eqv-brazetec-alloy-rods.png') center/cover no-repeat; color:#f5f5f1; padding:23px; direction:ltr; }
+      .pack::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(10,10,10,.74),rgba(10,10,10,.03) 75%); }
+      .pack b,.pack span { position:relative; z-index:1; display:block; }
+      .pack b { font:500 16px Manrope,sans-serif; letter-spacing:-.5px; }
+      .pack span { margin-top:145px; font:11px "DM Mono",monospace; color:#d1d2cc; }
+      .catalogue-head { padding:24px 0; display:flex; align-items:center; justify-content:space-between; }
+      .catalogue-head h2 { margin:0; direction:ltr; font:600 16px Manrope,sans-serif; letter-spacing:-.4px; }
+      .catalogue-head span { color:var(--muted); font-size:12px; }
+      .products { border-top:1px solid var(--line); }
+      .product { direction:ltr; display:grid; grid-template-columns:56px minmax(240px,1.4fr) 84px; gap:22px; padding:23px 0; border-bottom:1px solid var(--line); transition:background .2s ease, padding .2s ease; }
+      .product:hover { background:#eeeeea; padding-right:14px; padding-left:14px; }
+      .num,.standard { color:var(--muted); font:11px "DM Mono",monospace; }
+      .name { font:600 17px/1.25 Manrope,sans-serif; letter-spacing:-.5px; }
+      .name small { display:block; margin-top:7px; color:var(--muted); font:11px/1.5 "DM Mono",monospace; letter-spacing:.01em; }
+      .details { grid-column:2 / 3; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px 18px; margin-top:8px; }
+      .detail { color:#181918; font:500 11px/1.55 "DM Mono",monospace; }
+      .detail em { display:block; margin-bottom:2px; color:#454645; font-style:normal; font-size:9px; font-weight:500; letter-spacing:.06em; }
+      .alloy-code { color:var(--accent); font-weight:500; }
+      .badge { grid-column:3; grid-row:1 / span 2; justify-self:end; align-self:start; color:var(--accent); font:500 11px "DM Mono",monospace; white-space:nowrap; }
+      .contact { direction:ltr; display:flex; align-items:center; justify-content:space-between; gap:25px; margin-top:38px; padding:26px 28px; background:var(--ink); color:#f7f7f4; }
+      .contact-label { color:#bdbeba; font:11px "DM Mono",monospace; letter-spacing:.06em; }
+      .contact-label b { display:block; margin-top:8px; color:#f7f7f4; font:600 17px Manrope,sans-serif; letter-spacing:-.4px; }
+      .whatsapp { display:grid; place-items:center; width:58px; height:58px; border-radius:50%; background:#25d366; color:white; text-decoration:none; box-shadow:0 0 0 8px rgba(37,211,102,.13); transition:transform .2s ease, box-shadow .2s ease; }
+      .whatsapp svg { width:31px; height:31px; fill:currentColor; }
+      .whatsapp:hover { transform:translateY(-3px) scale(1.04); box-shadow:0 0 0 11px rgba(37,211,102,.17); }
+      footer { display:flex; justify-content:space-between; gap:20px; padding:26px 0 42px; color:var(--muted); font:11px/1.8 "DM Mono",monospace; direction:ltr; }
+      @media (max-width:800px) { .shell{padding:0 18px}.hero{grid-template-columns:1fr;padding-top:54px;gap:30px}.pack{height:180px}.pack span{margin-top:80px}.product{grid-template-columns:32px 1fr 70px;gap:10px;padding:19px 0}.product:hover{padding-right:6px;padding-left:6px}.details{grid-column:2 / 4;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.badge{grid-column:3;grid-row:1;align-self:start}.standard{display:none}h1{font-size:51px}.contact{align-items:center;flex-direction:column;padding:24px;text-align:center} }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <nav>
+        <div class="brand">SILVER<i>BRAZE</i></div>
+        <div class="nav-note">FLUX COATED ALLOYS / KOREA</div>
+      </nav>
+
+      <section class="hero">
+        <div>
+          <h1>SILVER BRAZING<br>ALLOY RODS.</h1>
+          <p>A focused range of flux-coated brazing rods, made in Korea and supplied in 1 kg packs.</p>
+        </div>
+        <div class="pack"><b>1 KG / FLUX COATED</b><span>500 MM RODS · MADE IN KOREA</span></div>
+      </section>
+
+      <div class="catalogue-head">
+        <h2>PRODUCT RANGE</h2><span>06 PRODUCTS · 1 KG PACKS</span>
+      </div>
+
+      <section class="products" aria-label="Products">
+        <article class="product"><span class="num">01</span><div class="name">EQV BRAZETEC 3003 U<small>SILVER BRAZING ALLOY RODS WITH CADMIUM</small></div><div class="details"><div class="detail"><em>COATING</em>FLUX - COATED</div><div class="detail"><em>DIMENSIONS</em>500 * 2.00 / 3.60 MM</div><div class="detail"><em>COMPOSITION</em>30% Ag (<span class="alloy-code">L-Ag 30 Cd</span>)</div><div class="detail"><em>STANDARDS</em>DIN 8513 · EN 1044 · ISO 17672</div><div class="detail"><em>ORIGIN</em>KOREA</div><div class="detail"><em>PACKAGING</em>1 KG</div></div><span class="badge">1 KG PACK</span></article>
+        <article class="product"><span class="num">02</span><div class="name">EQV BRAZETEC 2002 U<small>SILVER BRAZING ALLOY RODS WITH CADMIUM</small></div><div class="details"><div class="detail"><em>COATING</em>FLUX - COATED</div><div class="detail"><em>DIMENSIONS</em>500 * 2.00 / 3.60 MM</div><div class="detail"><em>COMPOSITION</em>20% Ag (<span class="alloy-code">L-Ag 20 Cd</span>)</div><div class="detail"><em>STANDARDS</em>DIN 8513 · EN 1044 · ISO 17672</div><div class="detail"><em>ORIGIN</em>KOREA</div><div class="detail"><em>PACKAGING</em>1 KG</div></div><span class="badge">1 KG PACK</span></article>
+        <article class="product"><span class="num">03</span><div class="name">EQV BRAZETEC SILFOS 2<small>COPPER PHOSPHORUS BRAZING ALLOY RODS WITH SILVER</small></div><div class="details"><div class="detail"><em>COATING</em>FLUX - COATED</div><div class="detail"><em>DIMENSIONS</em>500 * 2.00 / 3.60 MM</div><div class="detail"><em>COMPOSITION</em>2% Ag (<span class="alloy-code">L-Ag2P</span>)</div><div class="detail"><em>STANDARDS</em>DIN 8513 · EN 1044 · ISO 17672</div><div class="detail"><em>ORIGIN</em>KOREA</div><div class="detail"><em>PACKAGING</em>1 KG</div></div><span class="badge">1 KG PACK</span></article>
+        <article class="product"><span class="num">04</span><div class="name">EQV BRAZETEC SILFOS 5<small>COPPER PHOSPHORUS BRAZING ALLOY RODS WITH SILVER</small></div><div class="details"><div class="detail"><em>COATING</em>FLUX - COATED</div><div class="detail"><em>DIMENSIONS</em>500 * 2.00 / 3.60 MM</div><div class="detail"><em>COMPOSITION</em>5% Ag (<span class="alloy-code">L-Ag5P</span>)</div><div class="detail"><em>STANDARDS</em>DIN 8513 · EN 1044 · ISO 17672</div><div class="detail"><em>ORIGIN</em>KOREA</div><div class="detail"><em>PACKAGING</em>1 KG</div></div><span class="badge">1 KG PACK</span></article>
+        <article class="product"><span class="num">05</span><div class="name">은 브레이징 합금<small>SILVER BRAZING ALLOY</small></div><div class="details"><div class="detail"><em>COATING</em>FLUX - COATED</div><div class="detail"><em>DIMENSIONS</em>500 * 2.00 / 3.60 MM</div><div class="detail"><em>COMPOSITION</em><span class="alloy-code">L-Ag 3430 LP</span></div><div class="detail"><em>STANDARDS</em>DIN 8513 · EN 1044 · ISO 17672</div><div class="detail"><em>ORIGIN</em>KOREA</div><div class="detail"><em>PACKAGING</em>1 KG</div></div><span class="badge">1 KG PACK</span></article>
+        <article class="product"><span class="num">06</span><div class="name">은 브레이징 합금<small>SILVER BRAZING ALLOY</small></div><div class="details"><div class="detail"><em>COATING</em>FLUX - COATED</div><div class="detail"><em>DIMENSIONS</em>500 * 1.50 / 2.70 MM</div><div class="detail"><em>COMPOSITION</em><span class="alloy-code">L-Ag 3430 LP</span></div><div class="detail"><em>STANDARDS</em>DIN 8513 · EN 1044 · ISO 17672</div><div class="detail"><em>ORIGIN</em>KOREA</div><div class="detail"><em>PACKAGING</em>1 KG</div></div><span class="badge">1 KG PACK</span></article>
+      </section>
+
+      <section class="contact" aria-label="WhatsApp contact">
+        <div class="contact-label">ORDERS &amp; PRODUCT ENQUIRIES<b>Talk to us on WhatsApp</b></div>
+        <a class="whatsapp" href="https://wa.me/4915222448317" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.21c-.27-.14-1.58-.78-1.82-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.84 1.05-.15.18-.3.2-.57.07-1.58-.79-2.62-1.41-3.67-3.2-.28-.48.28-.45.79-1.5.09-.18.05-.34-.02-.48-.07-.14-.6-1.45-.82-1.98-.22-.52-.45-.45-.6-.46h-.51c-.18 0-.47.07-.71.34-.24.27-.93.91-.93 2.22s.96 2.58 1.09 2.76c.13.18 1.89 2.88 4.57 4.04.64.27 1.14.43 1.53.55.64.2 1.22.17 1.68.1.51-.08 1.58-.65 1.8-1.27.22-.62.22-1.15.15-1.27-.06-.12-.24-.19-.51-.33zM16.02 4.67c6.25 0 11.32 5.05 11.32 11.28 0 6.23-5.07 11.28-11.32 11.28-1.98 0-3.84-.51-5.46-1.4L4.67 27.67l1.9-5.75a11.2 11.2 0 0 1-1.87-6.22c0-6.23 5.07-11.28 11.32-11.28zm0 20.65c5.18 0 9.39-4.19 9.39-9.36 0-5.16-4.21-9.36-9.39-9.36-5.18 0-9.39 4.2-9.39 9.36 0 2.05.67 3.94 1.8 5.47l-1.11 3.36 3.49-1.1a9.4 9.4 0 0 0 5.21 1.63z"/></svg>
+        </a>
+      </section>
+
+      <footer><span>DIN 8513 · EN 1044 · ISO 17672</span><span>MADE IN KOREA</span></footer>
+    </main>
+  </body>
+</html>
